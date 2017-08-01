@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./resources/css/style.css" type="text/css"> <!--Sets stylesheet-->
+    <title>Tea Cozy</title>
+  </head>
+  <body>
+    <!--Primary knowledge gained from this project as a result of the My times project: Make a ton of div for every box like instance-->
+    <!--header content and navigation-->
+    <header class="flex-con">
+      <img class="logo" src="./resources/images/img-tea-cozy-logo.png" alt="">
+      <nav>
+        <span><a href="#mission">Mission</a></span>
+        <span><a href="#feature-tea">Featured Tea</a></span>
+        <span><a href="#location">Locations</a></span>
+      </nav>
+    </header>
+    <!--Mission Area and intro picture-->
+    <div class="content">
+      <div id="mission" class="flex-con">
+        <div class="text-mission">
+          <h2>Our Mission</h2>
+          <h4>Handpicked, Artisanally Curated, Free Range, Sustainable, Small Batch, Fair Trade, Organic Tea</h4>
+        </div>
+      </div>
+    <!--Featured tea and picture showcase-->
+      <div id="feature-tea">
+        <div class="head-tea">
+          <h2>Tea of the Month</h2>
+          <h4>What's Steeping at The Tea Cozy?</h4>
+        </div>
+        <div class="flex-con selection-tea"> <!--Because I have flex-con set to wrap and flex the block elements I've set each item to, will warp-->
+          <div class="selection-tea">
+            <img class="image small" src="./resources/images/img-berryblitz.jpg" alt="">
+            <span>Fall Berry Blitz Tea</span> <!--Started out using h4, but given headline importance for SEO I figure span is better-->
+          </div>
+          <div class="selection-tea">
+            <img class="image small" src="./resources/images/img-spiced-rum.jpg" alt="">
+            <span>Spiced Rum Tea</span>
+          </div>
+          <div class="selection-tea">
+            <img class="image small" src="./resources/images/img-donut.jpg" alt="">
+            <span>Seasonal Donuts</span>
+          </div>
+          <div class="selection-tea">
+            <img class="image small" src="./resources/images/img-myrtle-ave.jpg" alt="">
+            <span>Myrtle Ave Tea</span>
+          </div>
+          <div class="selection-tea">
+            <img class="image small" src="./resources/images/img-bedford-bizarre.jpg" alt="">
+            <span>Bedford Bizarre Tea</span>
+          </div>
+        </div>
+      </div>
+      <!--Locations of shops-->
+      <div id="location">
+        <h2>Locations</h2>
+        <!--<img class="image medium" src="./resources/images/img-locations-background.jpg" alt=""> Removed as I discovered it was a lot easier to add image in the style.css-->
+        <div class="flex-con columns">
+          <div class="column">
+            <h3>Downtown</h3>
+            <p>384 West 4th St</p>
+            <p>Suite 108</p>
+            <p>Portland, Maine</p>
+          </div>
+          <div class="column">
+            <h3>East Bayside</h3>
+            <p>3433 Phisherman's Avenue</p>
+            <p>(Northwest Corner)</p>
+            <p>Portland, Maine</p>
+          </div>
+          <div class="column">
+            <h3>Oakdale</h3>
+            <p>515 Crescent Avenue</p>
+            <p>Second Floor</p>
+            <p>Portland, Maine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!--Contact area-->
+    <div class="contact">
+      <h2>The Tea Cozy</h2>
+      <h5>contact@theteacozy.com</h5>
+      <h5>917-555-8904</h5>
+    </div>
+    <!--footer-->
+    <footer>
+      <h5>copyright The Tea Cozy 2017</h5>
+    </footer>
+  </body>
+</html>

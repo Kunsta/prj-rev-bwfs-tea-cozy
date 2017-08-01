@@ -1,0 +1,142 @@
+/*Overall*/
+body { /* Applies to everything on the page, except if overridden  */
+  margin: 0;
+  font-family: Helvetica; /* Sets overall font face  */
+  color: seashell;
+  background-color: black; /* Background color for the entire page  */
+  font-size: 22px;
+
+}
+
+h2, h3, h4 { /* Added some margin to make the black boxes look right and correct looking spacing between areas  */
+  margin: 11px;
+}
+
+a {
+  color: seashell; /* Changes color of text, that would otherwise be blue links  */
+  text-decoration: underline; /* selects all a and add underline, not really needed given link aspect of them - added for safety  */
+}
+
+.flex-con {
+  display: flex; /* parent flex container  */
+  justify-content: center; /* can only be declared in parent flex container  */
+  flex-wrap: wrap; /* can only be declared in parent flex container  */
+}
+
+/* Header */
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 5; /* Set to 5, as the instruction of good practice to always do it in increments of 5  */
+  height: 69px; /* Height header, as per guidelines  */
+  border-bottom: 1px solid seashell; /* As a border only on the bottom  */
+  align-items: center; /* Centers the items on the cross axis  */
+  background-color: black; /* Even if it looks black, if the page is scrolled, background color needs to be specified again, as header will otherwise have no background  */
+}
+
+.logo { /* could also have used: header img {} but I like that I can see that this is the logo  */
+  height: 50px;   /* Height of logo image as per guidelines  */
+  padding-left: 10px;
+}
+
+nav {
+  flex-grow: 1; /* Menu items are always the same distance and size - removing it makes logo and nav centeret */
+  text-align: right;
+}
+
+nav span {
+  margin: 5px 10px; /* Ensuring the same space between menu items - could likely also use padding */
+}
+
+/* Footer */
+
+footer {
+  padding-left: 20px; /* padding from the left, so it doesn't completely stick the left side */
+  text-align: left; /* sets the text to be left aligned */
+}
+
+
+/* Content - Start */
+
+.content {
+  padding-top: 69px; /* Leave space for heading, so content isn't covered by the fixed header*/
+  width: 1200px; /* Total width of content*/
+  margin: auto;
+  text-align: center; /* Set it here to avoid overriding header alignment */
+  opacity: 0.9; /* Sets transparancy of all elements - lowering it turns everything darker, as the black background shines more through*/
+}
+/* Content: Mission Area*/
+#mission {
+  background-image: url("../images/img-mission-background.jpg");
+  padding-top: 70px;
+  height: 700px; /* Height of image according to guidelines*/
+}
+
+#mission .text-mission {
+  background-color: black; /* Creates the black background for the text, across image*/
+  margin: auto;
+  width: 100%; /* So it covers the entire image*/
+}
+
+/* Content: Tea selection Area */
+
+#feature-tea {
+  height: 700px; /* same as image above */
+  width: 1000px; /* set required width */
+  margin: auto;
+  padding-top: 70px;
+}
+
+.selection-tea {
+  padding: 4px; /* too high padding pushes the item boxes too much - 4 gives a similar look as example */
+}
+
+.selection-tea img {
+  height: 200px; /* set required height */
+  width: 300px; /* set required width */
+  margin: 10px; /* 10 margin looks correct */
+  display: block; /* display element as a block element similar to p */
+}
+
+.selection-tea span {
+  display: block;
+  padding: 5px; /* Set the padding around each side of the spans to 5, thus equal the required 10px */
+  font-weight: bold; /* Set to bold as image clearly shows bold, even if not mentioned */
+}
+
+/* Content: Location Area */
+
+.flex-con.columns {
+  padding-top: 5px; /* padding around location title - which equals 5px to all four sides, which + padding from .column gives 15px  */
+}
+
+#location {
+  background-image: url("../images/img-locations-background.jpg"); /* first attempted to place image in html. Looked back and found that this was much easier */
+  padding-top: 80px; /* sets padding = area image covers above area title */
+  height: 500px; /* height of image for location */
+}
+
+#location .flex-con {
+  width: 1200px; /* The spread width of the black boxes, matching mission area width */
+  margin: auto; /* margin set to auto will center the elements to share evenly, unless window is smaller than several margins */
+}
+
+.column {
+  display: flex; /* parent flex container and flex item */
+  flex-basis: 300px; /* Controls the width of the column */
+  padding: 20px 2px; /* padding between black box sides and text inside  */
+  margin: 5px 20px; /* The space between each black location box needs to be 40, thus 20px in each side. Usign 5px for top/bottom margin, to use shortcode
+  for the left/right margin - which together with the padding-top from .flex-con.columns gives the required 15px between headline for locations*/
+  background-color: black;
+  flex-direction: column; /* using column as the text in each box is column shaped, and not a row. So basically its 3 columns on one line, next to each other with a 40px gap.
+  Guess row could be used, but would then require more arrangement of the text part */
+  justify-content: center;   /* Centers all the content in the .column class */
+  opacity: 1.0; /* Sets required transparancy, so not see through at all*/
+}
+
+/* Content: Contact Area */
+
+.contact {
+  text-align: center; /* Set it here to avoid overriding header alignment */
+  height: 200px; /* Sets the height of this contact section to 200 px as required by doc */
+}
